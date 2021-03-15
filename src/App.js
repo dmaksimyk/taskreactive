@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import connect from './redux/connector';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import PageHeader from './components/PageHeader/index';
+import Home from './panels/Home/index';
+import NewUser from './panels/NewUser/index';
+
+class App extends Component {
+	constructor (props) {
+    super(props);
+
+    this.state = {
+        users: []
+      };
+  }
+
+  render() {
+  	return (
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden", background: "rgba(0,0,0,.05)" }}>
+        <PageHeader/>
+        <div className="main" style={{marginTop: 70}}>
+          <NewUser/>
+          <Home/>
+        </div>
+      </div>
+  	);
+  };
 }
 
-export default App;
+export default connect(App);
