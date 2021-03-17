@@ -1,0 +1,23 @@
+.UserPosts__container {
+    width: 100%;
+    padding: 12px;
+    padding-top: 0;
+}
+
+.UserPosts__header, .no_posts {
+    cursor: default;
+    margin: 4px 0;
+    margin-top: 24px;
+    padding-bottom: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: .8;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+}
+
+.no_posts {
+    border: none;
+    font-size: 14px;
+    margin: 50px;
+    text-align: center;
+}

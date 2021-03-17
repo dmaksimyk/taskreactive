@@ -1,4 +1,7 @@
-.Home__container {
+.Profile__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     transition: 0.3s;
     background: rgba(250, 250, 250);
     margin: 12px 0;
@@ -10,8 +13,18 @@
     overflow: hidden;
 }
 
+.UpdateUser__bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0, .1);
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+}
+
 @media screen and (max-width: 500px) {
-    .Home__container {
+    .Profile__container {
         width: 90vw;
     }
   }

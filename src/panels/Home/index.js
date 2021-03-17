@@ -3,8 +3,8 @@ import connect from '../../redux/connector';
 import styles from './style.module.css';
 
 class Home extends Component {
-  componentDidMount(){
-    this.props.action('getUsers', {})
+  componentDidMount() {
+    this.props.action('setPage', {page: 'Home'})
   }
   
   render() {

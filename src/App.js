@@ -1,28 +1,52 @@
 import React, { Component } from 'react';
 import connect from './redux/connector';
+import './style.css';
+import { 
+  Route, 
+  BrowserRouter as Router,
+  Switch 
+} from 'react-router-dom';
 
-import PageHeader from './components/PageHeader/index';
-import Home from './panels/Home/index';
-import NewUser from './panels/NewUser/index';
+import { 
+  PageHeader
+} from './components';
+
+import { 
+  Home, 
+  NewUser, 
+  Profile 
+} from './panels';
 
 class App extends Component {
 	constructor (props) {
     super(props);
 
     this.state = {
-        users: []
       };
+  }
+
+  componentDidMount(){
+    this.props.action('getUsers', {})
   }
 
   render() {
   	return (
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden", background: "rgba(0,0,0,.05)" }}>
-        <PageHeader/>
-        <div className="main" style={{marginTop: 70}}>
-          <NewUser/>
-          <Home/>
+      <Router>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <PageHeader/>
+          <div className="main" style={{marginTop: 70}}>
+          <Switch>
+            <Route path="/profile">
+              <Profile/>
+            </Route>
+            <Route path="/">
+              <NewUser />
+              <Home />
+            </Route>
+          </Switch>
+          </div>
         </div>
-      </div>
+        </Router>
   	);
   };
 }

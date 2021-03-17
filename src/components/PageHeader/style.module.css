@@ -32,6 +32,10 @@
     border-radius: 100%;
 }
 
+.PageHeader_btnBack:hover {
+    background:rgba(200, 200, 200, .24);
+}
+
 .PageHeader_btnBack:active {
     transition: .1s;
     background:rgba(200, 200, 200, .54);
