@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/taskreactive/static/css/main.0b510c91.chunk.css",
-    "main.js": "/taskreactive/static/js/main.23eb3b0e.chunk.js",
-    "runtime-main.js": "/taskreactive/static/js/runtime-main.bd3d1d86.js",
-    "static/js/2.cf1bd0cf.chunk.js": "/taskreactive/static/js/2.cf1bd0cf.chunk.js",
-    "index.html": "/taskreactive/index.html",
-    "static/js/2.cf1bd0cf.chunk.js.LICENSE.txt": "/taskreactive/static/js/2.cf1bd0cf.chunk.js.LICENSE.txt"
+    "main.css": "./static/css/main.0b510c91.chunk.css",
+    "main.js": "./static/js/main.1d5b4d0d.chunk.js",
+    "runtime-main.js": "./static/js/runtime-main.03cc3a9f.js",
+    "static/js/2.2b3bf09c.chunk.js": "./static/js/2.2b3bf09c.chunk.js",
+    "index.html": "./index.html",
+    "static/js/2.2b3bf09c.chunk.js.LICENSE.txt": "./static/js/2.2b3bf09c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.bd3d1d86.js",
-    "static/js/2.cf1bd0cf.chunk.js",
+    "static/js/runtime-main.03cc3a9f.js",
+    "static/js/2.2b3bf09c.chunk.js",
     "static/css/main.0b510c91.chunk.css",
-    "static/js/main.23eb3b0e.chunk.js"
+    "static/js/main.1d5b4d0d.chunk.js"
   ]
 }
