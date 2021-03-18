@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;     
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -33,12 +33,12 @@
 }
 
 .PageHeader_btnBack:hover {
-    background:rgba(200, 200, 200, .24);
+    background: rgba(200, 200, 200, .24);
 }
 
 .PageHeader_btnBack:active {
     transition: .1s;
-    background:rgba(200, 200, 200, .54);
+    background: rgba(200, 200, 200, .54);
 }
 
 .PageHeader_caption h3 {
@@ -49,6 +49,6 @@
     color: rgba(0, 0, 0, 0.54);
 }
 
-.PageHeader_caption p, .PageHeader_caption h3{
+.PageHeader_caption p, .PageHeader_caption h3 {
     margin: 0;
 }

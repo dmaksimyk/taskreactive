@@ -4,7 +4,7 @@ import styles from './style.module.css';
 import { withRouter } from 'react-router-dom';
 
 import {
-  UserData, 
+  UserData,
   UserPosts,
   UpdateUser
 } from '../../components'
@@ -13,10 +13,10 @@ class Profile extends Component {
   render() {
     return (
       <div className={styles.Profile__container}>
-        <UpdateUser/>
-        <div className={styles.UpdateUser__bg} style={{display: this.props.visibleModal}}></div>
-        <UserData/>
-        <UserPosts/>
+        <UpdateUser />
+        <div className={styles.UpdateUser__bg} style={{ display: this.props.visibleModal }}></div>
+        <UserData />
+        <UserPosts />
       </div>
     );
   };

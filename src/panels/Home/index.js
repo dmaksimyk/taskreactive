@@ -4,17 +4,17 @@ import styles from './style.module.css';
 
 class Home extends Component {
   componentDidMount() {
-    this.props.action('setPage', {page: 'Home'})
+    this.props.action('setPage', { page: 'Home' })
   }
-  
+
   render() {
-  	return (
+    return (
       <div className={styles.Home__container}>
         <div>
           {this.props.usersAfter}
         </div>
       </div>
-  	);
+    );
   };
 }
 

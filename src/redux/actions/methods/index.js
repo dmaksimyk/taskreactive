@@ -1,0 +1,6 @@
+export { default as setPage } from './setPage/setPage'
+export { default as getUsers } from './getUsers/getUsers'
+export { default as newUser } from './newUser/newUser'
+export { default as getUserPosts } from './getUserPosts/getUserPosts'
+export { default as updateUser } from './updateUser/updateUser'
+export { default as visibleModal } from './visibleModal/visibleModal'
