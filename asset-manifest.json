@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/taskreactive/static/css/main.578e2f27.chunk.css",
+    "main.js": "/taskreactive/static/js/main.a066aac4.chunk.js",
+    "runtime-main.js": "/taskreactive/static/js/runtime-main.bd3d1d86.js",
+    "static/js/2.cf1bd0cf.chunk.js": "/taskreactive/static/js/2.cf1bd0cf.chunk.js",
+    "index.html": "/taskreactive/index.html",
+    "static/js/2.cf1bd0cf.chunk.js.LICENSE.txt": "/taskreactive/static/js/2.cf1bd0cf.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bd3d1d86.js",
+    "static/js/2.cf1bd0cf.chunk.js",
+    "static/css/main.578e2f27.chunk.css",
+    "static/js/main.a066aac4.chunk.js"
+  ]
+}
