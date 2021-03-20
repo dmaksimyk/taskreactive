@@ -19,8 +19,8 @@ export default (type, options) => (dispatch, get) => {
   })
     .then((response) => response.json())
     .then((json) => {
-      let newArr = get().app.users;
-      let checkUser = newArr.find((user) => user.id === json.id);
+      let newArr = get().app.users,
+          checkUser = newArr.find((user) => user.id === json.id);
 
       if (!checkUser) {
         newArr.push(json)
@@ -28,9 +28,7 @@ export default (type, options) => (dispatch, get) => {
         return console.log('User has been register', json.id)
       }
 
-      let newUserArr = newArr.map((user, index) => {
-        return <Users key={index} uid={user.id} name={user.name} username={user.username} />
-      });
+      let newUserArr = newArr.map((user) => <Users key={user.id} uid={user.id} name={user.name} username={user.username} />);
 
       dispatch({
         type: type,

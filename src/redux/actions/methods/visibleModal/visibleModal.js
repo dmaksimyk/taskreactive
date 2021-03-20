@@ -1,6 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
-export default (type, options) => (dispatch, get) => {
+export default (type) => (dispatch, get) => {
   let visible = get().app.visibleModal;
+  
   if (visible === "none") {
     dispatch({
       type: type,

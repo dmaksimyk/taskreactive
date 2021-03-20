@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.props.action('getUsers', {})
+    this.props.action('getUsers')
   }
 
   render() {

@@ -40,7 +40,7 @@ class UpdateUser extends Component {
 
 	sendUpdate() {
 		this.props.action('updateUser', { id: this.state.id, name: this.state.name, username: this.state.username, email: this.state.email, phone: this.state.phone });
-		this.props.action('visibleModal', {})
+		this.props.action('visibleModal')
 	}
 
 	render() {

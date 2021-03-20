@@ -11,7 +11,7 @@ class Home extends Component {
     return (
       <div className={styles.Home__container}>
         <div>
-          {this.props.usersAfter}
+          { this.props.usersAfter }
         </div>
       </div>
     );

@@ -26,10 +26,10 @@ class UserList extends Component {
           <ArrowRightOutlined />
         </div>
         <div className={styles.User__info}>
-          <p>@{this.props.username},</p>
-          <p>id: {this.props.uid}</p>
+          <p>@{ this.props.username },</p>
+          <p>id: { this.props.uid }</p>
         </div>
-        <p style={{ margin: 0, marginTop: 8 }}>Name: {this.props.name}</p>
+        <p style={{ margin: 0, marginTop: 8 }}>Name: { this.props.name }</p>
       </div>
     );
   };

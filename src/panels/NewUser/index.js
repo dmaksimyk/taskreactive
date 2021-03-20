@@ -51,7 +51,7 @@ class NewUser extends Component {
 
     return (
       <div className={styles.NewUser__container} style={this.state.height === 50 ? { height: 50 } : null}>
-        { this.state.height === 50 ? btn_resizeDiv : form_resizeDiv}
+        { this.state.height === 50 ? btn_resizeDiv : form_resizeDiv }
       </div>
     );
   };

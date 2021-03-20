@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-export default (type, options) => (dispatch, get) => {
+export default (type, options) => (dispatch) => {
   if (options.page === "Home") {
     return dispatch({
       type: type,

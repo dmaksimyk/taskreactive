@@ -12,13 +12,12 @@ export default (type, options) => (dispatch, get) => {
   };
 
   if (options.id === 11) {
-    let usersArr = get().app.users;
-    let checkUser = usersArr.findIndex((user) => user.id === options.id);
+    let usersArr = get().app.users,
+        checkUser = usersArr.findIndex((user) => user.id === options.id);
+    
     usersArr[checkUser] = user;
 
-    let newUserArr = usersArr.map((user, index) => {
-      return <Users key={index} uid={user.id} name={user.name} username={user.username} />
-    });
+    let newUserArr = usersArr.map((user) => <Users key={user.id} uid={user.id} name={user.name} username={user.username} />);
 
     return dispatch({
       type: "GET_USERS",
@@ -38,13 +37,12 @@ export default (type, options) => (dispatch, get) => {
   })
     .then((response) => response.json())
     .then((json) => {
-      let usersArr = get().app.users;
-      let checkUser = usersArr.findIndex((user) => user.id === json.id);
+      let usersArr = get().app.users,
+          checkUser = usersArr.findIndex((user) => user.id === json.id);
+      
       usersArr[checkUser] = json;
 
-      let newUserArr = usersArr.map((user, index) => {
-        return <Users key={index} uid={user.id} name={user.name} username={user.username} />
-      });
+      let newUserArr = usersArr.map((user) => <Users key={user.id} uid={user.id} name={user.name} username={user.username} />);
 
       dispatch({
         type: "GET_USERS",

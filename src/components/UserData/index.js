@@ -34,7 +34,7 @@ class UserData extends Component {
   }
 
   openModal() {
-    this.props.action('visibleModal', {})
+    this.props.action('visibleModal')
   }
 
   render() {
@@ -51,15 +51,15 @@ class UserData extends Component {
         <div className={styles.Information__container}>
           <div>
             <p>name:</p>
-            {this.state.name}
+            { this.state.name }
           </div>
           <div>
             <p>email:</p>
-            {this.state.email}
+            { this.state.email }
           </div>
           <div>
             <p>phone:</p>
-            {this.state.phone}
+            { this.state.phone }
           </div>
         </div>
       </div>
