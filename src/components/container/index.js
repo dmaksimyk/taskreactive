@@ -69,7 +69,7 @@ class Container extends Component {
               name: this.state.name,
               username: this.state.username,
               email: this.state.email,
-              phone: this.state.number
+              phone: this.state.phone
             })}
           >ADD USER</Button>
         </div>
