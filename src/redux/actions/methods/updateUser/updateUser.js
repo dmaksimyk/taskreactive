@@ -30,6 +30,7 @@ export default (type, options) => (dispatch, get) => {
 
   fetchData("PUT", "users", user)
     .then((obj) => {
+      if (obj.error) return console.log(obj.error)
       let checkUser = arrUsers.findIndex((user) => user.id === obj.request.id);
       arrUsers[checkUser] = obj.request;
 
