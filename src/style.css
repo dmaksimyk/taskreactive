@@ -3,8 +3,6 @@ body {
 }
 
 button:focus {
-    /* outline:1px dashed rgba(0, 0, 0, .54); */
-    /* outline-offset:-4px; */
     outline: none;
     border: 1px solid rgba(0, 0, 0, .54);
 } 
