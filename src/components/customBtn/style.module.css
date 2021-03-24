@@ -1,0 +1,59 @@
+.btn__customBtn {
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.UserData__btnEdit {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, .22);
+    opacity: .6;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.UserData__btnEditSvg {
+    width: 20px;
+    height: 20px;
+}
+
+.UserData__btnEdit:hover {
+    background: rgba(0, 0, 0, .08);
+}
+
+.UserData__btnEdit:active {
+    background: rgba(0, 0, 0, .54);
+}
+
+.PageHeader_btnBack {
+    transition: .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    color: rgba(0, 0, 0, 0.44);
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 100%;
+}
+
+.PageHeader_btnBack:hover {
+    background: rgba(200, 200, 200, .24);
+}
+
+.PageHeader_btnBack:active {
+    transition: .1s;
+    background: rgba(200, 200, 200, .54);
+}

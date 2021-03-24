@@ -17,6 +17,8 @@
 }
 
 .User__container {
+    background: rgba(250, 250, 250);
+    border: none;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -25,6 +27,7 @@
     user-select: none;
     cursor: pointer;
     transition: 0.2s;
+    width: 100%;
     z-index: 1;
     position: relative;
     border-top: 1px solid rgba(0, 0, 0, .09);
@@ -36,14 +39,18 @@
 }
 
 .User__info * {
+    margin: 4px 0;
+}
+
+.p {
     margin: 0;
 }
 
-.User__info p:nth-child(1) {
+.p:nth-child(1) {
     color: rgba(0, 0, 0, .6);
 }
 
-.User__info p:nth-child(2) {
+.p:nth-child(2) {
     margin-left: 8px;
     color: rgba(0, 0, 0, .4);
 }

@@ -1,0 +1,15 @@
+.Modal__container {
+    margin-top: 12px;
+}
+
+.title {
+    font-size: 12px;
+    opacity: .8;
+    font-weight: bold;
+    margin: 0;
+}
+
+.Input {
+    margin-bottom: 8px;
+    width: 100%;
+}

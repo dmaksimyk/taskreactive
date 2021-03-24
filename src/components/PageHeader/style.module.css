@@ -19,36 +19,14 @@
     align-items: center;
 }
 
-.PageHeader_btnBack {
-    transition: .2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    color: rgba(0, 0, 0, 0.44);
-    border: 1px solid rgba(0, 0, 0, .1);
-    border-radius: 100%;
-}
-
-.PageHeader_btnBack:hover {
-    background: rgba(200, 200, 200, .24);
-}
-
-.PageHeader_btnBack:active {
-    transition: .1s;
-    background: rgba(200, 200, 200, .54);
-}
-
-.PageHeader_caption h3 {
+.PageHeader_caption__h3 {
     color: rgba(0, 0, 0, 0.64);
 }
 
-.PageHeader_caption p {
+.PageHeader_caption__p {
     color: rgba(0, 0, 0, 0.54);
 }
 
-.PageHeader_caption p, .PageHeader_caption h3 {
+.PageHeader_caption__p, .PageHeader_caption__h3 {
     margin: 0;
 }

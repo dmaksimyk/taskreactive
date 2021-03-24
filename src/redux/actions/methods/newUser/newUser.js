@@ -1,39 +1,31 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from 'react';
 import { Users } from '../../../../components';
+import { fetchData } from '../';
 
 export default (type, options) => (dispatch, get) => {
   let user = {
-    "name": options.name ? options.name : "no name",
-    "username": options.username ? options.username : "no_username",
-    "email": options.email ? options.email : "no email",
-    "phone": options.phone ? options.phone : "no phone"
+    "name": options.name || "no name",
+    "username": options.username || "no_username",
+    "email": options.email || "no email",
+    "phone": options.phone || "no phone"
   };
 
-  fetch('https://jsonplaceholder.typicode.com/users', {
-    method: 'POST',
-    body: JSON.stringify(user),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  })
-    .then((response) => response.json())
-    .then((json) => {
-      let newArr = get().app.users,
-          checkUser = newArr.find((user) => user.id === json.id);
+  let arrUsers = get().app.users;
 
-      if (!checkUser) {
-        newArr.push(json)
-      } else {
-        return console.log('User has been register', json.id)
-      }
+  fetchData("POST", "users", user)
+    .then((obj) => {
+      let checkUser = arrUsers.find((user) => user.id === obj.request.id);
 
-      let newUserArr = newArr.map((user) => <Users key={user.id} uid={user.id} name={user.name} username={user.username} />);
+      if (checkUser) return console.log('User has been register', obj.request.id)
+      arrUsers.push(obj.request)
+
+      let newUserArr = arrUsers.map((user) => <Users key={user.id} uid={user.id} name={user.name} username={user.username} />);
 
       dispatch({
         type: type,
         payload: {
-          users: newArr,
+          users: arrUsers,
           usersAfter: newUserArr,
         }
       })

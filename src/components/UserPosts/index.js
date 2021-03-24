@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
 import connect from '../../redux/connector';
 import styles from './style.module.css';
+import getUrl from '../modules/getUrlKey';
 
 class UserData extends Component {
   componentDidMount() {
-    const getUrlKeys = () => {
-      let keys = {}
-      window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, (m, key, value) => keys[key] = value);
-      return keys;
-    }
-
-    let id = Number(getUrlKeys()["id"]);
+    let id = getUrl(this.props.users).id;
     if (!id) return this.props.action('setPage', { page: 'Home' })
     this.props.action('getUserPosts', { id: id });
   }

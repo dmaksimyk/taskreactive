@@ -21,16 +21,16 @@ class UserList extends Component {
   render() {
     if (this.state.redirect) return <Redirect push to={`/profile?id=${this.props.uid}`} />;
     return (
-      <div className={styles.User__container} onClick={this.redirect} >
+      <button className={styles.User__container} onClick={this.redirect} >
         <div className={styles.Icon__user_container}>
           <ArrowRightOutlined />
         </div>
         <div className={styles.User__info}>
-          <p>@{ this.props.username },</p>
-          <p>id: { this.props.uid }</p>
+          <p className={styles.p}>@{this.props.username},</p>
+          <p className={styles.p}>id: {this.props.uid}</p>
         </div>
-        <p style={{ margin: 0, marginTop: 8 }}>Name: { this.props.name }</p>
-      </div>
+        <p className={styles.p} style={{ margin: 0, marginTop: 8, textAlign: "left" }}>Name: {this.props.name}</p>
+      </button>
     );
   };
 }

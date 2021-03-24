@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import { EditOutlined } from '@material-ui/icons';
 import connect from '../../redux/connector';
 import styles from './style.module.css';
+import getUrl from '../modules/getUrlKey';
+import { CustomBtn } from '../';
+import Container from './container';
+import Header from './header';
 
 class UserData extends Component {
   constructor(props) {
@@ -11,21 +14,11 @@ class UserData extends Component {
       email: null,
       phone: null
     }
-    this.openModal = this.openModal.bind(this)
   }
 
   componentDidMount() {
-    const getUrlKeys = () => {
-      let keys = {}
-      window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, (m, key, value) => keys[key] = value);
-      return keys;
-    }
-
-    let id = Number(getUrlKeys()["id"]),
-      user = this.props.users.find((user) => user.id === id);
-
-    if (!id) return this.props.action('setPage', { page: 'Home' })
-
+    let user = getUrl(this.props.users);
+    if (!user) return this.props.action('setPage', { page: 'Home' })
     this.setState({
       name: user.name,
       email: user.email,
@@ -33,34 +26,17 @@ class UserData extends Component {
     })
   }
 
-  openModal() {
-    this.props.action('visibleModal')
-  }
-
   render() {
     return (
       <div className={styles.UserData__container}>
         <div className={styles.UserData_block__header}>
-          <div>
-            <p className={styles.UserData__header}>INFORMATION</p>
-          </div>
-          <div onClick={this.openModal} className={styles.UserData__btnEdit}>
-            <EditOutlined />
-          </div>
+          <Header />
+          <CustomBtn type="VISIBLE_MODAL" />
         </div>
         <div className={styles.Information__container}>
-          <div>
-            <p>name:</p>
-            { this.state.name }
-          </div>
-          <div>
-            <p>email:</p>
-            { this.state.email }
-          </div>
-          <div>
-            <p>phone:</p>
-            { this.state.phone }
-          </div>
+          <Container caption="name" value={this.state.name} />
+          <Container caption="email" value={this.state.email} />
+          <Container caption="phone" value={this.state.phone} />
         </div>
       </div>
     );

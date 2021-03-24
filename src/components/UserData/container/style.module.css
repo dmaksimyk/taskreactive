@@ -1,0 +1,16 @@
+.container {
+    border-bottom: 1px solid rgba(0, 0, 0, .08);
+    border-top: 1px solid rgba(0, 0, 0, .08);
+}
+
+.p {
+    cursor: default;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: .8;
+    margin: 4px 0;
+}
+
+.title {
+    margin: 4px 0;
+}

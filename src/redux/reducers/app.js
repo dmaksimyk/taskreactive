@@ -6,7 +6,8 @@ import {
   SET_PAGE,
   GET_USERS,
   GET_USER_POSTS,
-  VISIBLE_MODAL
+  VISIBLE_MODAL,
+  HIDE_MODAL
 } from '../types.js';
 
 import {
@@ -30,6 +31,7 @@ const reducer = (state = initialState, action) => {
     case GET_USERS: return update(state, { users: { $set: payload.users }, usersAfter: { $set: payload.usersAfter } })
     case GET_USER_POSTS: return update(state, { posts: { $set: payload.posts } })
     case VISIBLE_MODAL: return update(state, { visibleModal: { $set: payload.visibleModal } })
+    case HIDE_MODAL: return update(state, { visibleModal: { $set: payload.visibleModal } });
     default: return state;
   }
 }

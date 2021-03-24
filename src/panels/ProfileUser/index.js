@@ -14,7 +14,7 @@ class Profile extends Component {
     return (
       <div className={styles.Profile__container}>
         <UpdateUser />
-        <div className={styles.UpdateUser__bg} style={{ display: this.props.visibleModal }}></div>
+        <div className={styles.UpdateUser__bg} style={{ display: this.props.visibleModal }} onClick={() => this.props.action('visibleModal')}></div>
         <UserData />
         <UserPosts />
       </div>
