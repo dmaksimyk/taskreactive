@@ -15,8 +15,6 @@ export default (type, options) => (dispatch, get) => {
 
   fetchData("POST", "users", user)
     .then((obj) => {
-      if (obj.error) return console.log(obj.error)
-      
       let checkUser = arrUsers.find((user) => user.id === obj.request.id);
 
       if (checkUser) return console.log('User has been register', obj.request.id)

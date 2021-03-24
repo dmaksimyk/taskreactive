@@ -12,14 +12,14 @@ export default async (type, method, option) => {
 
   let response = {
     request: undefined,
-    error: undefined
   }
 
   try {
     let data = await fetch(url, (type === "POST" || type === "PUT") ? methods : null);
     response.request = await data.json()
   } catch (err) {
-    response.error = err
+    console.log(err)
   }
+  
   return response;
 }
