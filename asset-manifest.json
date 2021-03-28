@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.c5c62d38.chunk.css",
-    "main.js": "./static/js/main.bd06c90c.chunk.js",
-    "runtime-main.js": "./static/js/runtime-main.03cc3a9f.js",
-    "static/js/2.6df19eaa.chunk.js": "./static/js/2.6df19eaa.chunk.js",
-    "index.html": "./index.html",
-    "static/js/2.6df19eaa.chunk.js.LICENSE.txt": "./static/js/2.6df19eaa.chunk.js.LICENSE.txt"
+    "main.css": "/taskreactive/static/css/main.c5c62d38.chunk.css",
+    "main.js": "/taskreactive/static/js/main.bd06c90c.chunk.js",
+    "runtime-main.js": "/taskreactive/static/js/runtime-main.6b16a958.js",
+    "static/js/2.6df19eaa.chunk.js": "/taskreactive/static/js/2.6df19eaa.chunk.js",
+    "index.html": "/taskreactive/index.html",
+    "static/js/2.6df19eaa.chunk.js.LICENSE.txt": "/taskreactive/static/js/2.6df19eaa.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.03cc3a9f.js",
+    "static/js/runtime-main.6b16a958.js",
     "static/js/2.6df19eaa.chunk.js",
     "static/css/main.c5c62d38.chunk.css",
     "static/js/main.bd06c90c.chunk.js"
